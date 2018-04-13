@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //
         if (savedInstanceState != null) {
             for (int i = 0; i < img_list.length; i++) {
                 // get the identifier of the matching image.
