@@ -8,6 +8,6 @@ if you really like a combination you can save it by pressing the save button
 if you click on load on a later moment you will load the saved comination.
 the app runs on both portrait mode and landscape mode.
 
-![picture of the app in portrait mode](raw.githubusercontent.com/DanteNiewenhuis/Mr-potatohead/origin/doc/portrait)
+![picture of the app in portrait mode](/doc/portrait)
 
 ![picture of the app in landscape mode](http://url/to/img.png)
