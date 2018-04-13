@@ -4,20 +4,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="horizontal"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="73dp">
 
-    <FrameLayout
-        android:id="@+id/frameLayout2"
-        android:layout_width="300dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="32dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <LinearLayout
+        android:id="@+id/SaveButtons"
+        android:layout_width="592dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/gridLayout2"
-        app:layout_constraintHorizontal_bias="0.522"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/save_button_land"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="loadLayout"
+            android:text="Save" />
+
+        <Button
+            android:id="@+id/load_button_land"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="loadLayout"
+            android:text="Load" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/Images"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/CheckBoxes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SaveButtons">
 
         <ImageView
             android:id="@+id/body_img"
@@ -102,17 +135,17 @@
     </FrameLayout>
 
     <android.support.v7.widget.GridLayout
-        android:id="@+id/gridLayout2"
-        android:layout_width="282dp"
-        android:layout_height="162dp"
-        android:layout_marginEnd="24dp"
+        android:id="@+id/CheckBoxes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/frameLayout2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497">
+        app:layout_constraintStart_toEndOf="@+id/Images"
+        app:layout_constraintTop_toBottomOf="@+id/SaveButtons">
 
         <CheckBox
             android:id="@+id/body_box"
@@ -163,7 +196,7 @@
             android:layout_height="wrap_content"
             android:onClick="checkClicked"
             android:text="eyes"
-            app:layout_column="2"
+            app:layout_column="1"
             app:layout_row="0" />
 
         <CheckBox
@@ -172,7 +205,7 @@
             android:layout_height="wrap_content"
             android:onClick="checkClicked"
             android:text="hat"
-            app:layout_column="2"
+            app:layout_column="1"
             app:layout_row="1" />
 
         <CheckBox
@@ -181,7 +214,7 @@
             android:layout_height="wrap_content"
             android:onClick="checkClicked"
             android:text="nose"
-            app:layout_column="2"
+            app:layout_column="1"
             app:layout_row="2" />
 
         <CheckBox
@@ -190,7 +223,7 @@
             android:layout_height="wrap_content"
             android:onClick="checkClicked"
             android:text="shoes"
-            app:layout_column="2"
+            app:layout_column="1"
             app:layout_row="3" />
 
         <CheckBox
@@ -199,9 +232,10 @@
             android:layout_height="wrap_content"
             android:onClick="checkClicked"
             android:text="eyebrows"
-            app:layout_column="2"
+            app:layout_column="1"
             app:layout_row="4" />
 
     </android.support.v7.widget.GridLayout>
+
 
 </android.support.constraint.ConstraintLayout>
